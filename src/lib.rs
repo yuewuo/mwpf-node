@@ -13,7 +13,7 @@ pub fn sum(a: i32, b: i32) -> i32 {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Problem {
-  initializer: SolverInitializer,
+  // initializer: SolverInitializer,
 }
 
 #[napi]
