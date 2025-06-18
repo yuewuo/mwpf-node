@@ -17,6 +17,6 @@ pub struct Problem {
 }
 
 #[napi]
-pub fn solve() {
-  // println!("{:?}", problem);
+pub fn solve(problem: serde_json::Value) {
+  println!("{:?}", problem);
 }
