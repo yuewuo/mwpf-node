@@ -1,5 +1,5 @@
 {
-  "name": "mwpf-android-arm64",
+  "name": "mwpf-node-android-arm64",
   "version": "0.0.0",
   "os": [
     "android"
@@ -7,9 +7,9 @@
   "cpu": [
     "arm64"
   ],
-  "main": "mwpf.android-arm64.node",
+  "main": "mwpf-node.android-arm64.node",
   "files": [
-    "mwpf.android-arm64.node"
+    "mwpf-node.android-arm64.node"
   ],
   "license": "MIT",
   "engines": {

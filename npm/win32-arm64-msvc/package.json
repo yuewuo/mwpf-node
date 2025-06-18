@@ -1,5 +1,5 @@
 {
-  "name": "mwpf-win32-arm64-msvc",
+  "name": "mwpf-node-win32-arm64-msvc",
   "version": "0.0.0",
   "os": [
     "win32"
@@ -7,9 +7,9 @@
   "cpu": [
     "arm64"
   ],
-  "main": "mwpf.win32-arm64-msvc.node",
+  "main": "mwpf-node.win32-arm64-msvc.node",
   "files": [
-    "mwpf.win32-arm64-msvc.node"
+    "mwpf-node.win32-arm64-msvc.node"
   ],
   "license": "MIT",
   "engines": {

@@ -1,10 +1,10 @@
 {
-  "name": "mwpf",
+  "name": "mwpf-node",
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
   "napi": {
-    "name": "mwpf",
+    "name": "mwpf-node",
     "triples": {
       "defaults": false,
       "additional": [

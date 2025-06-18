@@ -1,5 +1,5 @@
 {
-  "name": "mwpf-linux-arm64-musl",
+  "name": "mwpf-node-linux-arm64-musl",
   "version": "0.0.0",
   "os": [
     "linux"
@@ -7,9 +7,9 @@
   "cpu": [
     "arm64"
   ],
-  "main": "mwpf.linux-arm64-musl.node",
+  "main": "mwpf-node.linux-arm64-musl.node",
   "files": [
-    "mwpf.linux-arm64-musl.node"
+    "mwpf-node.linux-arm64-musl.node"
   ],
   "license": "MIT",
   "engines": {

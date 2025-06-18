@@ -1,3 +1,3 @@
-# `mwpf-linux-arm64-gnu`
+# `mwpf-node-linux-arm64-gnu`
 
-This is the **aarch64-unknown-linux-gnu** binary for `mwpf`
+This is the **aarch64-unknown-linux-gnu** binary for `mwpf-node`

@@ -1,3 +1,3 @@
-# `mwpf-darwin-universal`
+# `mwpf-node-darwin-universal`
 
-This is the **universal-apple-darwin** binary for `mwpf`
+This is the **universal-apple-darwin** binary for `mwpf-node`

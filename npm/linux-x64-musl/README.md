@@ -1,3 +1,3 @@
-# `mwpf-linux-x64-musl`
+# `mwpf-node-linux-x64-musl`
 
-This is the **x86_64-unknown-linux-musl** binary for `mwpf`
+This is the **x86_64-unknown-linux-musl** binary for `mwpf-node`

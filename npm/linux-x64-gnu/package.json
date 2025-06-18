@@ -1,5 +1,5 @@
 {
-  "name": "mwpf-linux-x64-gnu",
+  "name": "mwpf-node-linux-x64-gnu",
   "version": "0.0.0",
   "os": [
     "linux"
@@ -7,9 +7,9 @@
   "cpu": [
     "x64"
   ],
-  "main": "mwpf.linux-x64-gnu.node",
+  "main": "mwpf-node.linux-x64-gnu.node",
   "files": [
-    "mwpf.linux-x64-gnu.node"
+    "mwpf-node.linux-x64-gnu.node"
   ],
   "license": "MIT",
   "engines": {

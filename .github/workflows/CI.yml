@@ -1,7 +1,7 @@
 name: CI
 env:
   DEBUG: napi:*
-  APP_NAME: mwpf
+  APP_NAME: mwpf-node
   MACOSX_DEPLOYMENT_TARGET: '10.13'
 permissions:
   contents: write

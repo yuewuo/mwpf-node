@@ -1,3 +1,3 @@
-# `mwpf-darwin-arm64`
+# `mwpf-node-darwin-arm64`
 
-This is the **aarch64-apple-darwin** binary for `mwpf`
+This is the **aarch64-apple-darwin** binary for `mwpf-node`
