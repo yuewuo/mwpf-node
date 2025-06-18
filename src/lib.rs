@@ -3,7 +3,7 @@
 #[macro_use]
 extern crate napi_derive;
 
-use mwpf::util::*;
+// use mwpf::util::*;
 use serde::{Deserialize, Serialize};
 
 #[napi]
