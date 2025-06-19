@@ -12,8 +12,8 @@ napi = { version = "2.12.2", default-features = false, features = [
     "serde-json",
 ] } # Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
 napi-derive = "2.12.2"
-# mwpf = { git = "https://github.com/yuewuo/mwpf.git", branch = "nodejs", features = ["loose_sanity_check"] }
-mwpf = { path = "../mwpf", features = ["loose_sanity_check"] }
+# mwpf = { git = "https://github.com/yuewuo/mwpf.git", branch = "nodejs" }
+mwpf = { path = "../mwpf" }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0.138"
 num-traits = "0.2.15"

@@ -10,7 +10,7 @@ test('print initializer', async (t) => {
       initializer: code.initializer(),
       positions: code.visualize_positions(),
       solver_config: {
-        "cluster_node_limit": 20,  // this default value is ok
+        "cluster_node_limit": 50,  // default value; set to 0 if panic
       },
       syndrome_pattern: {
         defect_vertices: [7, 8, 13],

@@ -1,3 +1,3 @@
-# `@yuewuo/mwpf-rational-darwin-universal`
+# `@yuewuo/mwpf-darwin-universal`
 
-This is the **universal-apple-darwin** binary for `@yuewuo/mwpf-rational`
+This is the **universal-apple-darwin** binary for `@yuewuo/mwpf`

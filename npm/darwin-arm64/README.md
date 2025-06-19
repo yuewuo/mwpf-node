@@ -1,3 +1,3 @@
-# `@yuewuo/mwpf-rational-darwin-arm64`
+# `@yuewuo/mwpf-darwin-arm64`
 
-This is the **aarch64-apple-darwin** binary for `@yuewuo/mwpf-rational`
+This is the **aarch64-apple-darwin** binary for `@yuewuo/mwpf`
