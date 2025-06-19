@@ -13,7 +13,7 @@ napi = { version = "2.12.2", default-features = false, features = [
     "serde-json",
 ] }
 napi-derive = "2.12.2"
-mwpf = { git = "https://github.com/yuewuo/mwpf.git", default-features = false, features = [
+mwpf = { git = "https://github.com/yuewuo/mwpf.git", branch = "nodejs", default-features = false, features = [
     "rational_weight",
     "qecp_integrate",
     "embed_visualizer",
