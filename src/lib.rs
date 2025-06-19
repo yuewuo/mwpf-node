@@ -3,7 +3,7 @@
 #[macro_use]
 extern crate napi_derive;
 
-// use mwpf::util::*;
+use mwpf::util::*;
 use serde::{Deserialize, Serialize};
 
 #[napi]
@@ -13,7 +13,7 @@ pub fn sum(a: i32, b: i32) -> i32 {
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Problem {
-  // initializer: SolverInitializer,
+  initializer: SolverInitializer,
 }
 
 #[napi]
