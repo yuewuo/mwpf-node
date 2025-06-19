@@ -3,6 +3,10 @@
   "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuewuo/mwpf-node"
+  },
   "napi": {
     "name": "mwpf",
     "triples": {
@@ -38,5 +42,15 @@
     "test": "ava",
     "universal": "napi universal",
     "version": "napi version"
+  },
+  "optionalDependencies": {
+    "@yuewuo/mwpf-darwin-arm64": "0.0.0",
+    "@yuewuo/mwpf-android-arm64": "0.0.0",
+    "@yuewuo/mwpf-linux-arm64-gnu": "0.0.0",
+    "@yuewuo/mwpf-linux-arm64-musl": "0.0.0",
+    "@yuewuo/mwpf-darwin-x64": "0.0.0",
+    "@yuewuo/mwpf-linux-x64-gnu": "0.0.0",
+    "@yuewuo/mwpf-linux-x64-musl": "0.0.0",
+    "@yuewuo/mwpf-darwin-universal": "0.0.0"
   }
 }
