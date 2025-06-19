@@ -14,7 +14,7 @@ napi = { version = "2.12.2", default-features = false, features = [
 ] }
 napi-derive = "2.12.2"
 mwpf = { git = "https://github.com/yuewuo/mwpf.git", default-features = false, features = [
-    "f64_weight",
+    "rational_weight",
     "qecp_integrate",
     "embed_visualizer",
 ] }

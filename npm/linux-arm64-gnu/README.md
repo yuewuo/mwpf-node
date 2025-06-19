@@ -1,3 +1,3 @@
-# `mwpf-node-linux-arm64-gnu`
+# `@yuewuo/mwpf-rational-linux-arm64-gnu`
 
-This is the **aarch64-unknown-linux-gnu** binary for `mwpf-node`
+This is the **aarch64-unknown-linux-gnu** binary for `@yuewuo/mwpf-rational`

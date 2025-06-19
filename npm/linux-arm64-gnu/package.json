@@ -1,5 +1,5 @@
 {
-  "name": "mwpf-node-linux-arm64-gnu",
+  "name": "@yuewuo/mwpf-rational-linux-arm64-gnu",
   "version": "0.0.0",
   "os": [
     "linux"
@@ -7,9 +7,9 @@
   "cpu": [
     "arm64"
   ],
-  "main": "mwpf-node.linux-arm64-gnu.node",
+  "main": "mwpf-rational.linux-arm64-gnu.node",
   "files": [
-    "mwpf-node.linux-arm64-gnu.node"
+    "mwpf-rational.linux-arm64-gnu.node"
   ],
   "license": "MIT",
   "engines": {

@@ -1,5 +1,5 @@
 {
-  "name": "mwpf-node-linux-x64-musl",
+  "name": "@yuewuo/mwpf-rational-linux-x64-musl",
   "version": "0.0.0",
   "os": [
     "linux"
@@ -7,9 +7,9 @@
   "cpu": [
     "x64"
   ],
-  "main": "mwpf-node.linux-x64-musl.node",
+  "main": "mwpf-rational.linux-x64-musl.node",
   "files": [
-    "mwpf-node.linux-x64-musl.node"
+    "mwpf-rational.linux-x64-musl.node"
   ],
   "license": "MIT",
   "engines": {

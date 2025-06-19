@@ -1,12 +1,12 @@
 {
-  "name": "mwpf-node-darwin-universal",
+  "name": "@yuewuo/mwpf-rational-darwin-universal",
   "version": "0.0.0",
   "os": [
     "darwin"
   ],
-  "main": "mwpf-node.darwin-universal.node",
+  "main": "mwpf-rational.darwin-universal.node",
   "files": [
-    "mwpf-node.darwin-universal.node"
+    "mwpf-rational.darwin-universal.node"
   ],
   "license": "MIT",
   "engines": {

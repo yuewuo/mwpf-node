@@ -1,5 +1,5 @@
 {
-  "name": "mwpf-node-darwin-x64",
+  "name": "@yuewuo/mwpf-rational-darwin-x64",
   "version": "0.0.0",
   "os": [
     "darwin"
@@ -7,9 +7,9 @@
   "cpu": [
     "x64"
   ],
-  "main": "mwpf-node.darwin-x64.node",
+  "main": "mwpf-rational.darwin-x64.node",
   "files": [
-    "mwpf-node.darwin-x64.node"
+    "mwpf-rational.darwin-x64.node"
   ],
   "license": "MIT",
   "engines": {

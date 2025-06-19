@@ -1,3 +1,3 @@
-# `mwpf-node-linux-arm64-musl`
+# `@yuewuo/mwpf-rational-linux-arm64-musl`
 
-This is the **aarch64-unknown-linux-musl** binary for `mwpf-node`
+This is the **aarch64-unknown-linux-musl** binary for `@yuewuo/mwpf-rational`

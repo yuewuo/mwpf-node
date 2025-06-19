@@ -1,3 +1,3 @@
-# `mwpf-node-darwin-x64`
+# `@yuewuo/mwpf-rational-darwin-x64`
 
-This is the **x86_64-apple-darwin** binary for `mwpf-node`
+This is the **x86_64-apple-darwin** binary for `@yuewuo/mwpf-rational`
