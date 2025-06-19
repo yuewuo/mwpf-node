@@ -5,19 +5,24 @@ import fs from 'fs'
 test('print initializer', async (t) => {
   const code = new RotatedSurfaceCode(5)
   try {
+    console.time('myFunctionExecution');
     let result_str = await solve({
       initializer: code.initializer(),
       positions: code.visualize_positions(),
+      solver_config: {
+        "cluster_node_limit": 20,  // this default value is ok
+      },
       syndrome_pattern: {
         defect_vertices: [7, 8, 13],
       },
       with_json: true,
       with_html: true,  // this is more expensive, only use for debugging
     })
+    console.timeEnd('myFunctionExecution');
     let result = JSON.parse(result_str)
     const json = result.json  // contains the visualizer data
     const html = result.html  // can be saved to a file and opened in a browser
-    console.log(json.snapshots)  // this is the step-by-step decoding process
+    // console.log(json.snapshots)  // this is the step-by-step decoding process
     if (html) {
       const filePath = 'index.spec.mjs.html';
       fs.writeFileSync(filePath, html)
