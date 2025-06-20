@@ -1,6 +1,10 @@
 {
   "name": "@yuewuo/mwpf-darwin-universal",
   "version": "0.0.3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuewuo/mwpf-node"
+  },
   "os": [
     "darwin"
   ],
