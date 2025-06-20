@@ -1,6 +1,7 @@
 import test from 'ava'
 import { solve } from '../index.js'
 import fs from 'fs'
+import assert from 'assert'
 
 test('print initializer', async (t) => {
   const code = new RotatedSurfaceCode(5)
@@ -28,6 +29,17 @@ test('print initializer', async (t) => {
       fs.writeFileSync(filePath, html)
       console.log(`HTML saved to ${filePath}`)
     }
+
+    // check syndrome function
+    t.deepEqual(code.syndrome_of([{ i: 0, j: 0, type: 'X' }]), [code.position_to_vertex_idx["1,1"]])
+    t.deepEqual(code.syndrome_of([{ i: 0, j: 0, type: 'Z' }]), [code.position_to_vertex_idx["1,-1"]])
+    t.deepEqual(code.syndrome_of([{ i: 0, j: 0, type: 'Y' }]), [code.position_to_vertex_idx["1,-1"], code.position_to_vertex_idx["1,1"]])
+
+
+    t.deepEqual(code.syndrome_of([{ i: 2, j: 2, type: 'X' }]), [code.position_to_vertex_idx["1,1"], code.position_to_vertex_idx["3,3"]])
+    t.deepEqual(code.syndrome_of([{ i: 2, j: 2, type: 'Z' }]), [code.position_to_vertex_idx["1,3"], code.position_to_vertex_idx["3,1"]])
+    t.deepEqual(code.syndrome_of([{ i: 2, j: 2, type: 'Y' }]), [code.position_to_vertex_idx["1,1"], code.position_to_vertex_idx["1,3"], code.position_to_vertex_idx["3,1"], code.position_to_vertex_idx["3,3"]])
+
     t.pass()
   } catch (e) {
     console.error("An error occurred:", e.message);
@@ -44,7 +56,7 @@ export class RotatedSurfaceCode {
     this.with_y_error = with_y_error
     // add vertices of the decoding graph
     this.positions = []
-    this.position_to_vertex_idx = new Map()
+    this.position_to_vertex_idx = {}
     for (let i = -1; i <= 2 * this.d - 1; i++) {
       for (let j = -1; j <= 2 * this.d - 1; j++) {
         if (this.is_stabilizer(i, j)) {
@@ -67,6 +79,7 @@ export class RotatedSurfaceCode {
     }
     this.weighted_edges = []
     this.edge_error_info = []
+    this.error_to_edge_index = {}
     for (const data_qubit_position of this.data_qubit_positions) {
       const i = data_qubit_position.i
       const j = data_qubit_position.j
@@ -85,15 +98,30 @@ export class RotatedSurfaceCode {
       for (const [enable, type] of [[this.with_x_error, 'X'], [this.with_z_error, 'Z'], [this.with_y_error, 'Y']]) {
         if (enable) {
           const syndrome = get_syndrome(i, j, type)
+          const edge_index = this.edge_error_info.length
           this.edge_error_info.push({
             syndrome,
             error_type: type,
             data_qubit_position,
           })
           this.weighted_edges.push({ vertices: syndrome })
+          this.error_to_edge_index[`${i},${j},${type}`] = edge_index
         }
       }
     }
+  }
+
+  syndrome_of(errors) { // errors: [{i, j, type}] -> number[]
+    let syndrome = new Set()
+    for (const error of errors) {
+      const { i, j, type } = error
+      assert(this.is_data_qubit(i, j))
+      assert(type == 'X' || type == 'Z' || type == 'Y')
+      const edge_index = this.error_to_edge_index[`${i},${j},${type}`]
+      const edge_syndrome = new Set(this.edge_error_info[edge_index].syndrome)
+      syndrome = syndrome.symmetricDifference(edge_syndrome)
+    }
+    return Array.from(syndrome).sort()
   }
 
   is_qubit(x, y) {
